@@ -1,0 +1,17 @@
+// pages/api/test.ts
+import type { NextApiRequest, NextApiResponse } from 'next'
+
+type Data = {
+  message: string
+}
+
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
+  res.status(200).json({ message: 'API is working' })
+}
+export default function handler(req, res) {
+  console.log("DATABASE_URL:", process.env.DATABASE_URL);
+  res.status(200).json({ dbUrl: process.env.DATABASE_URL });
+}
