@@ -1,0 +1,36 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL")
+}
+
+
+model Document {
+  id            String   @id @default(cuid())
+  title         String?
+  content       String?
+  cloudinaryId  String
+  cloudinaryUrl String
+  embedding     Float[] @db.DoublePrecision  // Changed from @db.Float
+  metadata      Json?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  fileSize      Int?
+  mimeType      String?
+  pageCount     Int?
+
+  @@index([cloudinaryId])
+}
+
+model SearchQuery {
+  id        String   @id @default(cuid())
+  query     String
+  embedding Float[] @db.DoublePrecision  // Changed from @db.Float
+  createdAt DateTime @default(now())
+}
