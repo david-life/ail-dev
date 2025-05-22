@@ -1,0 +1,32 @@
+.header {
+  @apply fixed top-8 left-0 right-0 z-40 bg-white shadow-sm;
+  @apply flex items-center justify-between px-6 py-2;
+  height: 60px;
+}
+
+.logo {
+  @apply flex items-center;
+}
+
+.logoContainer {
+  @apply relative flex items-center;
+  height: 40px;
+}
+
+.nav {
+  @apply flex-grow flex justify-center;
+}
+
+.navList {
+  @apply flex items-center gap-8;
+}
+
+.navItem {
+  @apply text-gray-600 hover:text-gray-900 cursor-pointer;
+  @apply text-sm font-medium;
+  @apply transition-colors duration-200;
+}
+
+.active {
+  @apply text-gray-900 font-semibold;
+}

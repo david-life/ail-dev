@@ -1,0 +1,102 @@
+/* styles/Results.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.metadata {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  color: #64748b;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.errorIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  background: #3b82f6;
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .metadata {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}
