@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@/components/*": ["components/*"],
+      "@/styles/*": ["styles/*"],
+      "@/types/*": ["types/*"]
+    },
+    "types": ["node"], // Add node types explicitly
+    "typeRoots": [
+      "./node_modules/@types", // Ensure types are resolved from node_modules
+      "./types" // Custom types if you have any in your project
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "prisma/schema.prisma",
+    "tailwind.config.js",
+    "types/global.d.ts"
+  ],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,19 @@
+# Mode Configuration
+USE_LOCAL_EMBEDDINGS=true
+ 
+# Database Configuration (Neon PostgreSQL)
+DATABASE_URL="postgresql://aildb_owner:npg_zSqxvwfhNe42@ep-noisy-poetry-a5fd80t9-pooler.us-east-2.aws.neon.tech/aildb?sslmode=verify-full"
+ 
+# Vector Embedding Configuration
+# HuggingFace (Cloud Option)
+ 
+HUGGINGFACE_API_URL="https://api-inference.huggingface.co"
+USE_HUGGINGFACE_API=false  # Set to true to use HuggingFace API
+HUGGINGFACE_API_KEY="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"  # Only needed if USE_HUGGINGFACE_API is true
+ 
+# File Storage Configuration (Cloudinary)
+CLOUDINARY_CLOUD_NAME="aildev"
+CLOUDINARY_API_KEY="651188137899726"
+CLOUDINARY_API_SECRET="1laXO9OVqbNiPxWnwUt7qCq5g1M"
+
+
