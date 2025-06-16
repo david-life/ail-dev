@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  font: .90rem sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: none;
+  COLOR: #545454;
+}
+
+.left {
+  flex: 1;
+  text-align: left;
+}
+
+.right {
+  flex: 1;
+  text-align: right;
+}
+
+.right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #545454;
+}
+
+.right a:hover {
+  color: #0004e3;
+}

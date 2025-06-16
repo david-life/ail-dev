@@ -1,0 +1,433 @@
+/* Basic Container and Layout */
+.container {
+  padding: 0 3.24rem; /* Based on the golden ratio */
+}
+
+.main {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #545454; /* Text color updated */
+
+}
+
+/* CUI Banner Styling */
+.cui-banner {
+  background-color: #00b400; /* Thin green banner */
+  color: #FFFFFF;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  width: 100%; /* Extend to bleed to the edges */
+  position: fixed; /* Fix to the top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+
+
+
+/* Footer Styling */
+.footer {
+  display: flex;
+  padding: 3.24rem 0; 
+  /* Based on the golden ratio */
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* Primary Title Styling (h1) */
+.title {
+  margin: 20vh 0 2rem 0; /* Add top margin to bring title down */
+  line-height: 1.1; /* Line height for better readability */
+  font-size: 4.5rem; /* Larger font size for focal point */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #545454;
+  font-family: 'Helvetica Neue', didot, serif; /* Professional font */
+}
+
+.title a {
+  color: #0004e3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.alt-title {
+  margin: 5vh 0 1.5rem 0; /* Adjusted margin for differentiation */
+  line-height: 5.1; /* Same line height as the primary title */
+  font-size: 3.2rem; /* Slightly smaller font size */
+  text-align: center; /* Centered text */
+  color: #545454; /* Slightly different color */
+  font-family: 'Helvetica Neue', sans-serif; /* Helvetica Neue font */
+  font-weight: 470; /* Medium weight */
+  margin-left: auto; /* Centered using auto margins */
+  margin-right: auto; /* Centered using auto margins */
+  max-width: 100%; /* Ensure it stays within container */
+  
+}
+
+.alt-title a {
+  color: #0004e3; /* Different link color */
+  text-decoration: none;
+}
+
+.alt-title a:hover,
+.alt-title a:focus,
+.alt-title a:active {
+  text-decoration: underline;
+  color: #545454; /* Text color updated */
+
+}
+
+/* Description Styling with Professional Typography */
+.description {
+  margin: 2rem 0;
+  line-height: 1.618; /* Golden ratio for line height */
+  font-size: 1.8rem;
+  text-align: center;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #0004e3;
+  padding: 0 1rem;
+  font-family: 'didot', serif; /* Professional font */
+}
+
+/* Grid and Card Styling */
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.card {
+  margin: 1.618rem; /* Based on the golden ratio */
+  padding: .809rem; /* Based on the golden ratio */
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0004e3;
+  border-color: #0004e3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Professional font */
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-family: 'Georgia', serif; /* Professional font */
+}
+
+/* Logo Styling */
+.logo-container {
+  width: 100%; /* Ensure it takes the full width */
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-strip {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 35s linear infinite;
+}
+
+.logo-strip img {
+  height: 40px; /* Set fixed height for logos */
+  width: auto; /* Maintain aspect ratio */
+  margin: 0 20px; /* Set even gap between logos */
+}
+
+/* Transparency effect on the left and right ends */
+.logo-container::before,
+.logo-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px; /* Set the width of the fade effect */
+  z-index: 10;
+}
+
+.logo-container::before {
+  left: 5;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 0, 0));
+}
+
+.logo-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .description {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+  .code {
+    font-size: 1.5rem;
+    padding: .5rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .description {
+    font-size: 1rem;
+    margin: 3rem 0;
+  }
+  .code {
+    font-size: 2rem;
+    padding: .75rem;
+  }
+  .infoButton {
+    background-color: transparent;
+    border: 2px solid lightgrey;
+    color: lightgrey;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    border-radius: 50%; /* Make the button circular */
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .infoButton.active {
+    border-color: #545454;
+    color: #545454;
+  }
+  /* Home.module.css */
+
+  .description {
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    animation: typing 5s steps(50) infinite, blink 1s step-end infinite;
+    margin-right: 50px;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  .customDivider {
+    border: 0;
+    height: 100px;
+    margin: 10px 0;
+  }
+  .gif-container {
+    width: 300px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    border: 2px solid #545454; /* Border for the rectangle */
+    overflow: hidden; /* Ensures the GIF stays within the rectangle */
+    display: flex; /* Centers the GIF horizontally and vertically */
+    justify-content: center; 
+    align-items: center;
+  }
+
+  .gif-container img {
+    animation: infinite-loop 1s linear infinite; /* Infinite loop animation */
+    width: 100%; /* Ensures the GIF scales within the container */
+    height: auto; /* Maintains aspect ratio */  }
+
+  @keyframes infinite-loop {
+    from { transform: scale(1); }
+    to { transform: scale(1); } /* Animation does nothing, just loops infinitely */
+  }
+  /* styles/DoDDeliverables.module.css */
+
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #00043e;
+  }
+
+  .card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .card li {
+    padding: 5px 0;
+    color: #555
+  }
+  /* styles/DoDDeliverables.module.css */
+
+  /* Basic Container and Layout */
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    color: #545454;
+  }
+
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    max-width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    color: #545454; /* Text color updated */
+
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #00043e;
+  }
+
+  .card ul {
+    list-style-type: none;
+    padding: 0;
+    color: #545454;
+  }
+
+  .card li {
+    padding: 5px 0;
+    color: #545454;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .grid {
+      width: 100%;
+      flex-direction: column;
+      color: #545454; /* Text color updated */
+
+    }
+
+    .title {
+      font-size: 1.5rem;
+      color: #545454; /* Text color updated */
+
+    }
+
+    .card {
+      padding: 15px;
+      max-width: 100%;
+      color: #545454; /* Text color updated */
+
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .title {
+      font-size: 1.8rem;
+      color: #545454; /* Text color updated */
+
+    }
+
+    .card {
+      padding: 18px;
+      color: #545454; /* Text color updated */
+
+    }
+  }
+
+
+
+}
+.centeredImage {
+  display: block; /* Ensures the image behaves like a block element */
+  margin-left: auto; /* Automatically pushes image to the center */
+  margin-right: auto; /* Automatically pushes image to the center */
+}

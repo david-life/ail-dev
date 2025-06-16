@@ -1,0 +1,114 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 249, 250, 251;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Global styles for your app */
+.cui-banner {
+  @apply bg-blue-900 text-white text-center py-2 text-sm font-medium;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* CUI Banner */
+.cui-banner {
+  background-color: #00b400; /* Thin green banner */
+  color: #FFFFFF; /* White text for readability */
+  padding: 0.4rem 0; /* Vertical spacing */
+  text-align: center; /* Center-align text */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern font */
+  font-size: .9rem; /* Standard size */
+  position: fixed; /* Always visible at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Keep above all elements */
+  border-bottom: none; /* Remove any unintended border/line */
+  box-shadow: none; /* Ensure there’s no visual separator */
+}
+
+@media (max-width: 768px) {
+  .cui-banner {
+    font-size: 0.875rem; /* Slightly smaller for mobile */
+    padding: 0.25rem 0; /* Adjust padding for smaller screens */
+  }
+}
+
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 248, 250, 252;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Custom scrollbar for the content preview */
+.prose pre {
+  max-height: 600px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.prose pre::-webkit-scrollbar {
+  width: 8px;
+}
+
+.prose pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.prose pre::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 4px;
+}
+
+/* PDF viewer responsiveness */
+.object-pdf {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
