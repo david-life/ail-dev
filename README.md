@@ -32,6 +32,6 @@ Dimensions (In Simple Terms) Think of dimensions like describing a point in spac
 
 3 dimensions = point in a room (x, y, z)
 
-1024 dimensions = describing text in 1024 different ways
+384 dimensions = describing text in 384 different ways
 
-When we convert text to vectors, each dimension represents a different aspect of the text's meaning. More dimensions = more detailed understanding, like describing a painting with 1024 different characteristics instead of just 3 (color, size, style).
+When we convert text to vectors, each dimension represents a different aspect of the text's meaning. More dimensions = more detailed understanding, like describing a painting with 384 different characteristics instead of just 3 (color, size, style).
